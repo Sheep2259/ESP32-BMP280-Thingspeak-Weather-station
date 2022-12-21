@@ -1,7 +1,7 @@
 /*
   WriteMultipleFields
   
-  Description: Writes values to fields 1,2,3,4 and status in a single ThingSpeak update every 20 seconds.
+  Description: Writes values to fields 1 and 2 and status in a single ThingSpeak update every 30 seconds.
   
   Hardware: ESP32 based boards
   
@@ -17,6 +17,8 @@
   
   Documentation for the ThingSpeak Communication Library for Arduino is in the README.md folder where the library was installed.
   See https://www.mathworks.com/help/thingspeak/index.html for the full ThingSpeak documentation.
+  
+  For IC2 use (which this uses) Search up your hardware IC2 pins for your device online
   
   For licensing information, see the accompanying license file.
   
@@ -34,8 +36,6 @@
 #define BMP_MISO (12)
 #define BMP_MOSI (11)
 #define BMP_CS   (10)
-float temp1 = 0;
-float pres1 = 0;
 
 Adafruit_BMP280 bmp; // I2C
 //Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
@@ -128,5 +128,5 @@ void loop() {
   
 
   
-  delay(30000); // Wait 20 seconds to update the channel again
+  delay(30000); // Wait 30 seconds to update the channel again
 }

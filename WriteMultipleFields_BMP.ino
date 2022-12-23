@@ -19,6 +19,15 @@
   See https://www.mathworks.com/help/thingspeak/index.html for the full ThingSpeak documentation.
   
   For IC2 use (which this uses) Search up your hardware IC2 pins for your device online
+  eg. esp32 with BMP280 module
+  3.3V ---- VCC
+  GND ----- GND
+  21 ----- SDA
+  22 ----- SCL
+  some BMP280/BME280 modules break out the CSB and SDO pins as well: 
+  5V ------ CSB (enables the I2C interface)  
+  GND ----- SDO (I2C Address 0x76) 
+  5V ------ SDO (I2C Address 0x77)
   
   For licensing information, see the accompanying license file.
   
